@@ -2,7 +2,7 @@ import React from 'react'
 import FullCalendar from '@fullcalendar/react' // must go before plugins
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from "@fullcalendar/interaction"
-const Calendar = () => {
+const ReactFullCalendar = () => {
   let  handleDateClick = (arg) => { // bind with an arrow function
         alert(arg.dateStr)
       }
@@ -20,4 +20,4 @@ const Calendar = () => {
   )
 }
 
-export default Calendar
+export default ReactFullCalendar
