@@ -26,6 +26,7 @@ export default function ReactBigCalendar() {
   };
   return (
     <div className="App">
+      <h1 className="text-3xl font-bold underline text-center">React Calendar</h1>
       <Calendar
         views={["day", "agenda", "work_week", "month"]}
         selectable
