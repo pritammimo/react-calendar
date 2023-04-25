@@ -24,11 +24,14 @@ export default function ReactBigCalendar() {
         }
       ]);
   };
+  const onNavigate=(newDate,view,action)=>{
+   console.log("new",action);
+  }
   return (
     <div className="App">
       <h1 className="text-3xl font-bold underline text-center">React Calendar</h1>
       <Calendar
-        views={["day", "agenda", "work_week", "month"]}
+        views={["day", "agenda", "work_week", "month",'week']}
         selectable
         localizer={localizer}
         defaultDate={new Date()}
@@ -37,6 +40,7 @@ export default function ReactBigCalendar() {
         style={{ height: "100vh" }}
         onSelectEvent={(event) => alert(event.title)}
         onSelectSlot={handleSelect}
+        onNavigate={onNavigate}
       />
     </div>
   );
