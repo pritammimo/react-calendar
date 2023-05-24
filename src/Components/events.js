@@ -117,20 +117,45 @@ export default [
     start: new Date(2023, 3, 20, 19, 30, 0),
     end: new Date(2023, 3, 22, 2, 0, 0)
   },
+  // {
+  //   id: 14,
+  //   title: "Today",
+  //   start: new Date(new Date().setHours(new Date().getHours() - 3)),
+  //   end: new Date(new Date().setHours(new Date().getHours() + 3))
+  // },
   {
     id: 14,
-    title: "Today",
-    start: new Date(new Date().setHours(new Date().getHours() - 3)),
-    end: new Date(new Date().setHours(new Date().getHours() + 3))
-  },
-  {
-    id: 15,
-    title: "Point in Time Event",
+    title: "Event",
     start: now,
     end: now
   },
   {
+    id: 15,
+    title: "Holiday",
+    allDay:true,
+    start: new Date(2023, 4, 20, 0, 0, 0),
+    end: new Date(2023, 4, 22, 23, 59, 0)
+  },
+  {
     id: 16,
+    title: "Unavailable",
+    start: new Date(2023, 4, 23, 10, 30, 0),
+    end: new Date(2023, 4, 23, 12, 30, 0)
+  },
+  {
+    id: 17,
+    title: "Unavailable",
+    start: new Date(2023, 4, 23, 13, 30, 0),
+    end: new Date(2023, 4, 23, 14, 30, 0)
+  },
+  {
+    id: 18,
+    title: "Unavailable",
+    start: new Date(2023, 4, 24, 19, 30, 0),
+    end: new Date(2023, 4, 24, 23, 30, 0)
+  },
+  {
+    id: 19,
     title: "Video Record",
     start: new Date(2023, 3, 14, 15, 30, 0),
     end: new Date(2023, 3, 14, 19, 0, 0)

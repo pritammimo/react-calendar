@@ -24,6 +24,30 @@ export default function ReactBigCalendar() {
         }
       ]);
   };
+  const eventPropGetter=(event, start, end, isSelected)=>{
+    let newStyle = {
+      backgroundColor: "lightgrey",
+      color: 'black',
+      borderRadius: "0px",
+      border: "none"
+    };
+
+    if (event.title ==="Unavailable"){
+      newStyle.backgroundColor = "lightgreen"
+    }
+    if (event.title ==="Holiday"){
+      newStyle.backgroundColor = "#e090ee"
+    }
+    if (event.title ==="Event"){
+      newStyle.backgroundColor = "#e71d1d"
+    }
+
+    return {
+      className: "",
+      style: newStyle
+    };
+  }
+  
   const onNavigate=(newDate,view,action)=>{
    console.log("new",action);
   }
@@ -31,13 +55,14 @@ export default function ReactBigCalendar() {
     <div className="App">
       <h1 className="text-3xl font-bold underline text-center">React Calendar</h1>
       <Calendar
-        views={["day", "agenda", "work_week", "month",'week']}
+        views={["day", "agenda", "month",'week']}
         selectable
         localizer={localizer}
         defaultDate={new Date()}
-        defaultView="month"
+        defaultView="week"
         events={eventsData}
-        style={{ height: "100vh" }}
+        style={{ height: "90vh" }}
+        eventPropGetter={eventPropGetter}
         onSelectEvent={(event) => alert(event.title)}
         onSelectSlot={handleSelect}
         onNavigate={onNavigate}
